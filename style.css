@@ -1,0 +1,70 @@
+body {
+    font-family: Arial;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+/*Encabezado*/
+header {
+    background-color: #41b823;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+/* Estilos de la parte izquierda del encabezado */
+.left {
+    display: flex;
+    align-items: center;
+}
+#logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #fff;
+}
+#name {
+    margin: 0;
+}
+
+#section {
+    width: 100%;
+}
+.imagen_conteiner img {
+    width: 100%;
+    display: block;
+}
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    width: 600px;
+}
+.hero #infomation{
+    padding: 1%;
+    color: #fff;
+    line-height: 50%;
+    font-size: 19px;
+}
+
+.hero #search #textbox{
+    border-radius: 10px;
+    height: 30px;
+    width: 600px;
+    margin-bottom: 10px;
+}
+
+.hero #search #searchbt{
+    border-radius: 10px;
+    background-color: #41b823;
+    font-size: 15px;
+    height: 25px;
+    width: 110px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
