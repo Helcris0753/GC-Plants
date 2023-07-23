@@ -18,12 +18,23 @@ document.addEventListener('DOMContentLoaded', function() {
         
     });
     
-    fetch(`backend.php?query=${encodeURIComponent(query)}`)
-    .then(response => response.text())
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => {
-        console.error('Error en la solicitud:', error);
-    });
+    const options = {
+        method: 'POST',
+        body: JSON.stringify({action: 'search',  query: query, page: page}), // Enviar el dato como JSON
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+    fetch('backend.php', options)
+            .then(response => response.json())
+            .then(data => {
+                var i = 0;
+                data.results.forEach(result => {
+                    const row_search = document.getElementById(`result${i}`);
+                    row_search.textContent = result.Plant_Scient_Name;
+                    row_search.href = `./plant.html?plantid=${result.link}`;
+                    i++;
+                });
+            })
+            .catch(error => console.error('Error:', error));
 });
