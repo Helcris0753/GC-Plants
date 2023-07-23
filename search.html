@@ -11,30 +11,39 @@
     <header>
         <div class="left">
             <img src="images/logo.png" alt="logo" id="logo">
-            <h1 id="name">GC Plants</h1>
+            <a id="name">GC Plants</a>
         </div>
     </header>
-    <section id="section">
-        <div class="imagen_conteiner" id="background_img">
-            <img src="images/body.png" alt="body">
-        </div>
-        <div class="hero">
-            <div id="infomation">
-                <h2>Search a plant here</h2>
-                <p>We have a lot of information about dominicans plants</p>
+    <main>
+        <input type="text" id="searchbox">
+        <button id="searchbt" href="search.html">Search plant</button>
+        <h2>Results:</h2>
+        <div class="searchs">
+            <div class="search">
+                <a id="result10"  href="home.html">result10</a>
+                <a id="result11">result10</a>
+                <a id="result12">result10</a>
+                <a id="result13">result10</a>
+                <a id="result14">result10</a>
+                <a id="result15">result10</a>
+                <a id="result16">result10</a>
+                <a id="result17">result10</a>
+                <a id="result18">result10</a>
+                <a id="result19">result10</a>
             </div>
-            <div id="search">
-                <input type="text" id="searchbox">
-                <button id="searchbt">Search plant</button>
-            </div>
         </div>
-    </section>
+    </main>
     <footer>
         <p>This is a project carried out by &COPY; Green Cells Company.</p>
     </footer>
 </body>
 <script>
+    const queryString = window.location.search;
+    const params = new URLSearchParams(queryString);
+    const query = params.get('query');
+    const page = params.get('page');
     const inputfill = document.getElementById('searchbox');
+    inputfill.value = query;
     const button = document.getElementById('searchbt');
     button.addEventListener('click', function(){
         console.log('aqui')

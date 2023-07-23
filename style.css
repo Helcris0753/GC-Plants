@@ -4,14 +4,12 @@ body {
     margin: 0;
     padding: 0;
 }
-/*Encabezado*/
 header {
     background-color: #41b823;
     color: #fff;
     padding: 10px;
     text-align: left;
 }
-/* Estilos de la parte izquierda del encabezado */
 .left {
     display: flex;
     align-items: center;
@@ -25,8 +23,9 @@ header {
 }
 #name {
     margin: 0;
+    font-size: 30px;
+    font-weight: bold;
 }
-
 #section {
     width: 100%;
 }
@@ -47,19 +46,20 @@ header {
     font-size: 19px;
 }
 
-.hero #search #textbox{
+input{
     border-radius: 10px;
     height: 30px;
     width: 600px;
     margin-bottom: 10px;
 }
 
-.hero #search #searchbt{
-    border-radius: 10px;
+#searchbt {
+    display: inline-block;
+    padding: 9px 10px;
     background-color: #41b823;
-    font-size: 15px;
-    height: 25px;
-    width: 110px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 7px;
 }
 
 footer {
@@ -68,3 +68,26 @@ footer {
     padding: 10px;
     text-align: center;
 }
+
+/* Estilos de la pagina de busqueda */
+main {
+    padding: 30px;
+}
+
+.searchs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px; 
+}
+
+.search a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+}
+
