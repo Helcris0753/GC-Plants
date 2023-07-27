@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLants Data Base</title>
+    <link rel="icon" type="images/png" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="headerbar">
+            <div id="left">
+                <img src="images/logo.png" alt="logo" id="logo">
+                <h1 id="name">GC Plants</h1>
+            </div>
+            <div id="center">
+                <h6></h6>
+            </div>
+            <div id="right">
+                <h6>usuario</h6>
+            </div>
+        </div>
+    </header>
+    <section id="section">
+        <div class="imagen_conteiner" id="background_img">
+            <img src="images/body.png" alt="body">
+        </div>
+        <div class="hero">
+            <div id="infomation">
+                <h2>Search a plant here</h2>
+                <p>We have a lot of information about dominicans plants</p>
+            </div>
+            <div id="search">
+                <input type="text" id="searchbox">
+                <button id="searchbt">Search plant</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>This is a project carried out by &COPY; Green Cells Company.</p>
+    </footer>
+</body>
+<script>
+    const inputfill = document.getElementById('searchbox');
+    const button = document.getElementById('searchbt');
+    button.addEventListener('click', function(){
+        if(inputfill.value !== ''){
+            const params = new URLSearchParams();
+            params.append('query', inputfill.value);
+            params.append('page', 0);
+            const url = `search.html?${params.toString()}`;
+            window.location.href = url;
+        }
+        }
+    )
+</script>
+</html>

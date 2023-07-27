@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLants Data Base</title>
+    <link rel="icon" type="images/png" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="scriptPlant.js"></script>
+</head>
+<body>
+    <header>
+        <div class="headerbar">
+            <div id="left">
+                <img src="images/logo.png" alt="logo" id="logo">
+                <a id="name" href="index.html">GC Plants</a>
+            </div>
+            <div id="center">
+                <input type="text" id="searchbox">
+                <button id="searchbt">Search plant</button>
+            </div>
+            <div id="right">
+                <h6>usuario</h6>
+            </div>
+        </div>
+    </header>
+    <main id="plantmain">
+        <div class="headerContent">
+            <h1 id="Plant_Scient_Name"></h1>
+            <h5 id="Species_Name"></h5>
+        </div>
+        <div class="container">
+            <div class="informacionContent">
+                <h6 class="atributes">Categorie:</h6>
+                <h6 id="Categories_Name">Categoría</h6>
+                <h6 class="atributes">Conservation status:</h6>
+                <h6 id="Cons_Status_Name">Estado de conservación</h6>
+                <h6 class="atributes"class="atributes">Genus:</h6>
+                <h6 id="Genus_Name">Género</h6>
+                <h6 class="atributes">Family:</h6>
+                <h6 id="Family_Name">Familia</h6>
+                <h6 class="atributes">Order:</h6>
+                <h6 id="Order_Name">Orden</h6>
+                <h6 class="atributes">Class:</h6>
+                <h6 id="Class_Name">Clase</h6>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>This is a project carried out by &COPY; Green Cells Company.</p>
+    </footer>
+</body>
+<script>
+    const inputfill = document.getElementById('searchbox');
+    const button = document.getElementById('searchbt');
+    button.addEventListener('click', function(){
+        if(inputfill.value !== ''){
+            const params = new URLSearchParams();
+            params.append('query', inputfill.value);
+            params.append('page', 0);
+            const url = `search.html?${params.toString()}`;
+            window.location.href = url;
+        }
+        }
+    )
+</script>
