@@ -7,14 +7,22 @@ body {
 header {
     background-color: #41b823;
     color: #fff;
-    padding: 10px;
-    text-align: left;
+    padding: 2px 2%;
 }
-.left {
+.headerbar {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerbar #left {
     display: flex;
     align-items: center;
 }
-#logo {
+
+
+#logo{
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -23,8 +31,10 @@ header {
 }
 #name {
     margin: 0;
-    font-size: 30px;
+    font-size: 32px;
     font-weight: bold;
+    text-decoration: none;
+    color: #fff;
 }
 #section {
     width: 100%;
@@ -46,10 +56,10 @@ header {
     font-size: 19px;
 }
 
-input{
+#searchbox{
     border-radius: 10px;
     height: 30px;
-    width: 600px;
+    width: 300px;
     margin-bottom: 10px;
 }
 
@@ -62,16 +72,22 @@ input{
     border-radius: 7px;
 }
 
+.hero #searchbox{
+    width: 600px;
+}
+
 footer {
     background-color: #333;
     color: #fff;
     padding: 10px;
     text-align: center;
+    align-items: flex-end;
 }
 
 /* Estilos de la pagina de busqueda */
-main {
-    padding: 30px;
+#searchmain{
+    padding: 30px 2%;
+    min-height: 750px;
 }
 
 .searchs {
@@ -83,11 +99,66 @@ main {
 
 .search a {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 8px 12px;
-    background-color: #f0f0f0;
     text-decoration: none;
     color: #333;
     border-radius: 5px;
+    width: 600px;
 }
+
+.searcharea {
+    display: flex;
+    width: 300;
+    flex-direction: column;
+}
+
+.buttonsarea {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navigation {
+    margin-left: 105px;
+}
+
+.buttonsarea a{
+    margin: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+/* Estilos de la pagina de la planta */
+#plantmain{
+    padding: 10px;
+    height: 750px;
+}
+
+.headerContent h1,
+.headerContent h5 {
+    margin: 1px 0;
+}
+
+.container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.container .informacionContent {
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    text-align: left;
+    width: 200px;
+    font-size: 22px;
+}
+.informacionContent .atributes {
+    background-color: rgb(240, 238, 145);
+}
+.informacionContent h6 {
+    margin: 4px 0;
+    margin-left: 4px;
+}
+
 

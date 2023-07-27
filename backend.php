@@ -36,13 +36,23 @@ if (isset($data['action']) && $data['action'] === 'search') {
             "results" => $results_array,
             "pages" => $pages
         );
-
+        $conn->close();
         echo json_encode($json_reponse);
     }
     else{
-        echo mysqli_error($conn);
+        $conn->close();
+        echo json_encode(mysqli_error($conn));
     }
     
+}
+elseif (isset($data['action']) && $data['action'] === 'find') {
+    $plant_id = $data["plantid"];
+    
+    $result = $conn -> query("call ppPlant($plant_id)");
+
+    $row = $result -> fetch_assoc();
+    $conn->close();
+    echo json_encode($row);
 }
 ?>
 
